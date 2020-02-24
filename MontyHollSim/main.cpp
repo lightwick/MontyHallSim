@@ -22,17 +22,18 @@ int main(int argc, char** argv)
 	SDL_GetDesktopDisplayMode(0, &DM); // index 0 being main moniter
 
 	window main_window("main window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, DM.w, DM.h);
-	sprite opened(main_window, "./pic/opened.png", 100, DM.w / 2, DM.h / 2);
-	sprite closed(main_window, "./pic/closed.png", 300, DM.w / 2, DM.h / 2);
+	sprite opened(main_window, "./pic/opened.png", 190, DM.w / 2, DM.h / 2);
+	sprite closed(main_window, "./pic/closed.png", 190, DM.w / 2, DM.h / 2);
+	sprite car(main_window, "./pic/car.png", 190, DM.w / 2, DM.h / 2);
 	while (isRunning)
 	{
 		main_window.clear(0,100,100,0);
 
-		// opened.resize();
+		car.apply();
 		opened.apply();
-		// closed.apply();
-		pollEvent(opened);
-		//std::cout << opened.size << std::endl;
+
+		pollEvent(car);
+
 		// shows rendered product to window
 		SDL_RenderPresent(main_window._renderer);
 

@@ -33,16 +33,16 @@ void sprite::spriteEvent(SDL_Event event)
 {
 	switch (event.key.keysym.sym)
 	{
-	case SDLK_RIGHT:
+	case SDLK_d:
 		_rect.x += 10;
 		break;
-	case SDLK_LEFT:
+	case SDLK_a:
 		_rect.x -= 10;
 		break;
-	case SDLK_UP:
+	case SDLK_w:
 		_rect.y -= 10;
 		break;
-	case SDLK_DOWN:
+	case SDLK_s:
 		_rect.y += 10;
 		break;
 	}

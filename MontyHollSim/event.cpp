@@ -12,7 +12,7 @@ SDL_Event event;
 
 void keyEvent(sprite& a)
 {
-	// a.spriteEvent(event);
+	a.spriteEvent(event);
 	switch (event.key.keysym.sym)
 	{
 	case SDLK_ESCAPE:

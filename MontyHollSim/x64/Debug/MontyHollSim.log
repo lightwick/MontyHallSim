@@ -1,8 +1,2 @@
-﻿  event.cpp
-  sprite.cpp
-C:\Users\small\Desktop\Project Code\MontyHallSim\MontyHollSim\sprite.cpp(13,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\small\Desktop\Project Code\MontyHallSim\MontyHollSim\sprite.cpp(14,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\small\Desktop\Project Code\MontyHallSim\MontyHollSim\sprite.cpp(28,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\small\Desktop\Project Code\MontyHallSim\MontyHollSim\sprite.cpp(29,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
+﻿  main.cpp
   MontyHollSim.vcxproj -> C:\Users\small\Desktop\Project Code\MontyHallSim\x64\Debug\MontyHollSim.exe
