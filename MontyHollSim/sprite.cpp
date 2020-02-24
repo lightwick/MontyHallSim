@@ -20,12 +20,6 @@ void sprite::apply() const
 	SDL_RenderCopy(_window._renderer, _texture, NULL, &_rect);
 }
 
-void sprite::resize(float percent)
-{
-	_rect.w *= percent / 100;
-	_rect.h *= percent / 100;
-}
-
 void sprite::spriteEvent(SDL_Event event)
 {
 	switch (event.key.keysym.sym)

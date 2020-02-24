@@ -18,19 +18,6 @@ void keyEvent() // sprite& a)
 	case SDLK_ESCAPE:
 		isRunning = false;
 		break;
-	case SDLK_UP:
-		
-	}
-}
-
-void windowEvent()
-{
-	switch (event.window.event)
-	{
-	case SDL_WINDOWEVENT_CLOSE:
-		SDL_Window* temp = SDL_GetWindowFromID(event.window.windowID);
-		SDL_DestroyWindow(temp);
-		break;
 	}
 }
 
@@ -40,9 +27,6 @@ void pollEvent(sprite& a)
 	{
 		switch (event.type)
 		{
-		case SDL_WINDOWEVENT:
-			windowEvent();
-			break;
 		case SDL_KEYDOWN:
 			keyEvent();
 			break;
