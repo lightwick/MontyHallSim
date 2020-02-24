@@ -9,7 +9,6 @@
 #include "window.h"
 #include "event.h"
 #include "sprite.h"
-#include "WindowsOS.h"
 
 bool isRunning = true;
 
@@ -24,7 +23,7 @@ int main(int argc, char** argv)
 	window main_window("main window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, DM.w, DM.h);
 	sprite opened(main_window, "./pic/opened.png", 190, DM.w / 2, DM.h / 2);
 	sprite closed(main_window, "./pic/closed.png", 190, DM.w / 2, DM.h / 2);
-	sprite car(main_window, "./pic/car.png", 190, DM.w / 2, DM.h / 2);
+	sprite car(main_window, "./pic/car.png", 20, DM.w / 2, DM.h / 2);
 	while (isRunning)
 	{
 		main_window.clear(0,100,100,0);

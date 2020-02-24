@@ -29,26 +29,12 @@ void keyEvent(sprite& a)
 	std::cout << a.size << std::endl;
 }
 
-void windowEvent()
-{
-	switch (event.window.event)
-	{
-	case SDL_WINDOWEVENT_CLOSE:
-		SDL_Window* temp = SDL_GetWindowFromID(event.window.windowID);
-		SDL_DestroyWindow(temp);
-		break;
-	}
-}
-
 void pollEvent(sprite& a)
 {
 	if (SDL_PollEvent(&event))
 	{
 		switch (event.type)
 		{
-		case SDL_WINDOWEVENT:
-			windowEvent();
-			break;
 		case SDL_KEYDOWN:
 			keyEvent(a);
 			break;
