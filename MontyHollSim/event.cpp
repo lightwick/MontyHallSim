@@ -1,5 +1,5 @@
 #include <SDL_events.h>
-
+#define CHANGING_VALUE 10
 #ifdef _DEBUG
 #include <iostream>
 #endif
@@ -10,7 +10,7 @@ extern bool isRunning;
 
 SDL_Event event;
 
-void keyEvent() // sprite& a)
+void keyEvent(sprite& a)
 {
 	// a.spriteEvent(event);
 	switch (event.key.keysym.sym)
@@ -19,8 +19,14 @@ void keyEvent() // sprite& a)
 		isRunning = false;
 		break;
 	case SDLK_UP:
-		
+		a.size += CHANGING_VALUE;
+		break;
+	case SDLK_DOWN:
+		a.size -= CHANGING_VALUE;
+		break;
 	}
+	a.resize();
+	std::cout << a.size << std::endl;
 }
 
 void windowEvent()
@@ -44,7 +50,7 @@ void pollEvent(sprite& a)
 			windowEvent();
 			break;
 		case SDL_KEYDOWN:
-			keyEvent();
+			keyEvent(a);
 			break;
 		case SDL_QUIT:
 			isRunning = false;

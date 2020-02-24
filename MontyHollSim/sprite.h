@@ -13,13 +13,16 @@ public:
 	// applies sprite to renderer
 	void apply() const;
 	void draw(int x, int y) const;
-	void resize(float percentage);
+	void resize();
 	void spriteEvent(SDL_Event event);
 	SDL_Rect getRect() { return _rect; }
+
+	float size;
 private:
 	SDL_Texture* _texture;
 	window _window;
 	SDL_Rect _rect;
+	SDL_Rect _basePic;
 };
 
 /*
