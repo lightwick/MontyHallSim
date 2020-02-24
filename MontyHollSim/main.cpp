@@ -23,7 +23,7 @@ int main(int argc, char** argv)
 
 	window main_window("main window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, DM.w, DM.h);
 
-	// configured right size percentage as 190 through testing
+	// door size: 190 / car size: 20
 	sprite opened(main_window, "./pic/opened.png", 190, DM.w / 2, DM.h / 2);
 	sprite closed(main_window, "./pic/closed.png", 190, DM.w / 2, DM.h / 2);
 	sprite car(main_window, "./pic/car.png", 20, DM.w / 2, DM.h / 2);
@@ -38,7 +38,7 @@ int main(int argc, char** argv)
 		SDL_RenderPresent(main_window._renderer);
 
 #ifdef _DEBUG
-		escKey();
+		// escKey();
 		static int i = 0;
 		std::cout << i++ << std::endl;
 #endif

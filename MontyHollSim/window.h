@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <SDL.h>
+#include <SDL_image.h>
 
 class window
 {
@@ -12,5 +13,6 @@ public:
 	SDL_Window *getWindow() { return _window; }
 private:
 	SDL_Window* _window;
+	SDL_Surface* icon = IMG_Load("./pic/logo.png");
 	int _w, _h, _x, _y;
 };

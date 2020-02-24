@@ -1,9 +1,2 @@
-﻿  event.cpp
-  main.cpp
-  sprite.cpp
-C:\Users\small\Desktop\Project Code\MontyHallSim\MontyHollSim\sprite.cpp(10,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\small\Desktop\Project Code\MontyHallSim\MontyHollSim\sprite.cpp(11,36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  window.cpp
-  Generating Code...
-  LINK : C:\Users\small\Desktop\Project Code\MontyHallSim\x64\Debug\MontyHollSim.exe not found or not built by the last incremental link; performing full link
+﻿  window.cpp
   MontyHollSim.vcxproj -> C:\Users\small\Desktop\Project Code\MontyHallSim\x64\Debug\MontyHollSim.exe
