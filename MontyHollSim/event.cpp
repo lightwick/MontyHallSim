@@ -1,5 +1,5 @@
 #include <SDL_events.h>
-#define CHANGING_VALUE 5
+#define CHANGING_VALUE 1
 #ifdef _DEBUG
 #include <iostream>
 #endif

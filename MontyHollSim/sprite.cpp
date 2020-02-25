@@ -1,7 +1,9 @@
 #include "sprite.h"
 #include <cstdlib>
 #include <iostream>
-
+#ifdef _DEBUG
+#define MOVEMENT 1;
+#endif
 // surface -> texture -> renderer -> window
 // x and y position of middle of the image
 sprite::sprite(const window &window, std::string img_path, float percentage, int x, int y):
@@ -29,23 +31,30 @@ void sprite::resize()
 	_rect.h = _basePic.h * size / 100;
 }
 
+int x_ch=0, y_ch = 0;
+
 void sprite::spriteEvent(SDL_Event event)
 {
 	switch (event.key.keysym.sym)
 	{
 	case SDLK_d:
-		_rect.x += 10;
+		_rect.x += MOVEMENT;
+		x_ch++;
 		break;
 	case SDLK_a:
-		_rect.x -= 10;
+		_rect.x -= MOVEMENT;
+		x_ch--;
 		break;
 	case SDLK_w:
-		_rect.y -= 10;
+		_rect.y -= MOVEMENT;
+		y_ch--;
 		break;
 	case SDLK_s:
-		_rect.y += 10;
+		_rect.y += MOVEMENT;
+		y_ch++;
 		break;
 	}
+	std::cout << "x value change: " << x_ch << " y value change: " << y_ch << std::endl;
 }
 
 void animation(window window, float fps, int n ,...)

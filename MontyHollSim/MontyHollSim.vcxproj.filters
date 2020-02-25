@@ -46,7 +46,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="spriteProperties.txt">
+    <Text Include="todo.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

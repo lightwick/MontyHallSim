@@ -21,9 +21,10 @@ int main(int argc, char** argv)
 	SDL_DisplayMode DM;
 	SDL_GetDesktopDisplayMode(0, &DM); // index 0 being main moniter
 
+	// x: -3, y: 12
 	window main_window("main window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, DM.w, DM.h);
-	sprite opened(main_window, "./pic/opened.png", 190, DM.w / 2, DM.h / 2);
-	sprite closed(main_window, "./pic/closed.png", 193, DM.w / 2, DM.h / 2);
+	sprite opened(main_window, "./pic/opened.png", 192, DM.w / 2-1, DM.h/2+13);
+	sprite closed(main_window, "./pic/closed.png", 190, DM.w / 2, DM.h / 2);
 	sprite car(main_window, "./pic/car.png", 20, DM.w / 2, DM.h / 2);
 
 	printRect(opened);
@@ -32,11 +33,13 @@ int main(int argc, char** argv)
 
 	while (isRunning)
 	{
-
+		static int i = 0;
 		main_window.clear(0,100,100,0);
-
-		if (isOpen) opened.apply();
+		if (i % 2 == 0) opened.apply();
 		else closed.apply();
+
+		//if (isOpen) opened.apply();
+		//else closed.apply();
 
 		pollEvent(opened);
 
@@ -47,7 +50,7 @@ int main(int argc, char** argv)
 		// escKey();
 		//std::cout << i++ << std::endl;
 #endif
-
+		i++;
 	}
 	SDL_Quit();
 

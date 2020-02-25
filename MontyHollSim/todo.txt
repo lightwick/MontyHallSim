@@ -1,2 +1,0 @@
-#1: allign the opened and closed doors so it feels natural
-#2: get width & height data of sprites
