@@ -1,0 +1,9 @@
+base:
+	#1. coordanate(x and y) algorithm; incase I want to add a commenter on the right
+	#2. monty hall computer automized simulation
+	#3. person interaction
+	#4. result ui
+	#5. beginning screen ui
+	#6. text renderer
+aesthetics:
+	#1. add logo to icon
