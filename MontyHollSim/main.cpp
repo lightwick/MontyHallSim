@@ -23,8 +23,7 @@ int main(int argc, char** argv)
 
 	window main_window("main window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, DM.w, DM.h);
 
-	// door size: 190 / car size: 20
-	sprite opened(main_window, "./pic/opened.png", 190, DM.w / 2, DM.h / 2);
+	sprite opened(main_window, "./pic/opened.png", 192, DM.w / 2 - 1, DM.h / 2 + 13);
 	sprite closed(main_window, "./pic/closed.png", 190, DM.w / 2, DM.h / 2);
 	sprite car(main_window, "./pic/car.png", 20, DM.w / 2, DM.h / 2);
 
