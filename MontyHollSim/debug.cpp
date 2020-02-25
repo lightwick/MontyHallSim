@@ -1,4 +1,6 @@
 #include <SDL.h>
+#include "sprite.h"
+#include <iostream>
 
 extern bool isRunning;
 
@@ -15,4 +17,10 @@ void escKey()
 			break;
 		}
 	}
+}
+
+void printRect(sprite& a)
+{
+	SDL_Rect _rect = a.getRect();
+	std::cout << "width: " << _rect.w << " height: " << _rect.h << std::endl;
 }
