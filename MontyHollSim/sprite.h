@@ -27,6 +27,6 @@ private:
 
 /*
 * summary: variadic function same time period apart
-* note : fps not implemented yet
+* note : far from finished
 */
 void animation(window _window, float fps, int n, ...);

@@ -1,5 +1,5 @@
 #include <SDL_events.h>
-#define CHANGING_VALUE 10
+#define CHANGING_VALUE 5
 #ifdef _DEBUG
 #include <iostream>
 #endif
@@ -7,6 +7,7 @@
 #include "sprite.h"
 
 extern bool isRunning;
+extern bool isOpen;
 
 SDL_Event event;
 
@@ -23,6 +24,9 @@ void keyEvent(sprite& a)
 		break;
 	case SDLK_DOWN:
 		a.size -= CHANGING_VALUE;
+		break;
+	case SDLK_SPACE:
+		isOpen = !isOpen;
 		break;
 	}
 	a.resize();

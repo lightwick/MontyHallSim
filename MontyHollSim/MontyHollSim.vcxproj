@@ -141,6 +141,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="debug.cpp" />
     <ClCompile Include="sprite.cpp" />
     <ClCompile Include="event.cpp" />
     <ClCompile Include="main.cpp" />
@@ -151,6 +152,9 @@
     <ClInclude Include="sprite.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="spriteProperties.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
