@@ -14,13 +14,6 @@
 
 bool isRunning = true;
 
-void Init_Door(window _window)
-{
-	SDL_Surface* open = IMG_Load("./pic/opened.png");
-	SDL_Surface* closed = IMG_Load("./pic/closed.png");
-	SDL_Texture* door::open = SDL_CreateTextureFromSurface(_window._renderer, surface);
-}
-
 int main(int argc, char** argv)
 {
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
@@ -30,7 +23,14 @@ int main(int argc, char** argv)
 	SDL_GetDesktopDisplayMode(0, &DM); // index 0 being main moniter
 
 	window main_window("main window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, DM.w, DM.h);
-	Init_Door();
+
+	door leftD(main_window, DM.w / 4, DM.h / 4);
+	door rightD(main_window, DM.w / 4 * 3, DM.h / 4 * 3);
+	door midD(main_window, DM.w / 2, DM.h / 2);
+
+	// Door initialization for texture setting.
+	// Temporary solution for static members
+	leftD.init();
 
 	sprite opened(main_window, "./pic/opened.png", 192, DM.w / 2 - 1, DM.h / 2 + 13);
 	sprite closed(main_window, "./pic/closed.png", 190, DM.w / 2, DM.h / 2);
