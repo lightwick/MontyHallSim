@@ -7,3 +7,7 @@ base:
 	#6. text renderer
 aesthetics:
 	#1. add logo to icon
+optimization:
+	#1. delete unused functions
+	#2. solution for door class' static member initialization; 
+		Currently an instance of the class must be made

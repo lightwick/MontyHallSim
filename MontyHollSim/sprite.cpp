@@ -9,8 +9,7 @@ sprite::sprite(const window &window, std::string img_path, float percentage, int
 	SDL_Surface* surface = IMG_Load(img_path.c_str());
 	_rect.w = surface->w * percentage / 100;
 	_rect.h = surface->h * percentage / 100;
-	_rect.x = x-_rect.w/2;
-	_rect.y = y-_rect.h/2;
+	setRect(x, y);
 	_texture = SDL_CreateTextureFromSurface(window._renderer, surface);
 	SDL_FreeSurface(surface);
 }
@@ -18,6 +17,12 @@ sprite::sprite(const window &window, std::string img_path, float percentage, int
 void sprite::apply() const
 {
 	SDL_RenderCopy(_window._renderer, _texture, NULL, &_rect);
+}
+
+void sprite::setRect(int x, int y)
+{
+	_rect.x = x - _rect.w / 2;
+	_rect.y = y - _rect.h / 2;
 }
 
 void sprite::spriteEvent(SDL_Event event)
